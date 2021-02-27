@@ -1,14 +1,7 @@
-# Márcio, segue um arquivo onde o projeto era subir de 65% para 75%
-# os ganhos de uma empresa de empréstimos que apresentava perda de 35% (100-65),
-# classificando os clientes em bom pagador ou ruim, ou seja, liberando o crédito ou não.
-
-# Vou mencionar cada trecho do código.
-# Neste exemplo vamos de SVM.
-
 # Iniciando com a importação do pandas:
 import pandas as pd
 
-# Márcio, aqui o parâmetro encoding indica que os dados estão em português:
+# Aqui o parâmetro encoding indica que os dados estão em português:
 base = pd.read_csv('Credito.csv', sep = ';', encoding = 'cp860')
 
 # Criação da variável X que presenta os atributos previsores,
@@ -19,12 +12,9 @@ X = base.iloc[:, 0:19].values
 # alguns professores usam o nome da variável de classe:
 y = base.iloc[:, 19].values
 
-# Márcio, outra opção seria usar o drop, por exemplo,
+# outra opção seria usar o drop, por exemplo,
 # variável = base_de_dados.columns.drop(['variáveis_não_utilizadas']),
 # retornando assim a coluna desejada.
-
-
-# Márcio, aqui será o momento do pré-processamento:
 
 # Transformação dos atributos categóricos no formato string para números
 from sklearn.preprocessing import LabelEncoder
@@ -56,8 +46,6 @@ X = scaler.fit_transform(X)
 from sklearn.model_selection import train_test_split
 X_treinamento, X_teste, y_treinamento, y_teste = train_test_split(X, y, test_size=0.3, random_state=0)
 
-
-# Márcio, até aqui os algoritmos são iguais,
 # agora vamos rodar o SVM:
 from sklearn.svm import SVC
 classificador = SVC(kernel = 'rbf', random_state = 1, C = 2.0, gamma = 'auto')
@@ -72,9 +60,8 @@ precisao = accuracy_score(y_teste, previsoes)
 matriz = confusion_matrix(y_teste, previsoes)
 taxa_erro = 1 - precisao
 
-# Márcio, aqui é uma visualização do resultado:
+# aqui é uma visualização do resultado:
 import collections
 collections.Counter(y_teste)
 
 # Após algumas passagens, consegui 76.7%
-# Abs.

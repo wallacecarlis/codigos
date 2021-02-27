@@ -1,7 +1,7 @@
 # Iniciando com a importação do pandas:
 import pandas as pd
 
-# Márcio, aqui o parâmetro encoding indica que os dados estão em português:
+# aqui o parâmetro encoding indica que os dados estão em português:
 base = pd.read_csv('Credito.csv', sep = ';', encoding = 'cp860')
 
 # Criação da variável X que presenta os atributos previsores,

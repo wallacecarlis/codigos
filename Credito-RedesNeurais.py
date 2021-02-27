@@ -1,14 +1,7 @@
-# Márcio, segue um arquivo onde o projeto era subir de 65% para 75%
-# os ganhos de uma empresa de empréstimos que apresentava perda de 35% (100-65),
-# classificando os clientes em bom pagador ou ruim, ou seja, liberando o crédito ou não.
-
-# Vou mencionar cada trecho do código.
-# Neste exemplo vamos de Redes Neurais.
-
 # Iniciando com a importação do pandas:
 import pandas as pd
 
-# Márcio, aqui o parâmetro encoding indica que os dados estão em português:
+# aqui o parâmetro encoding indica que os dados estão em português:
 base = pd.read_csv('Credito.csv', sep = ';', encoding = 'cp860')
 
 # Criação da variável X que presenta os atributos previsores,
@@ -19,12 +12,9 @@ X = base.iloc[:, 0:19].values
 # alguns professores usam o nome da variável de classe:
 y = base.iloc[:, 19].values
 
-# Márcio, outra opção seria usar o drop, por exemplo,
+# outra opção seria usar o drop, por exemplo,
 # variável = base_de_dados.columns.drop(['variáveis_não_utilizadas']),
 # retornando assim a coluna desejada.
-
-
-# Márcio, aqui será o momento do pré-processamento:
 
 # Transformação dos atributos categóricos no formato string para números
 from sklearn.preprocessing import LabelEncoder
@@ -57,7 +47,7 @@ from sklearn.model_selection import train_test_split
 X_treinamento, X_teste, y_treinamento, y_teste = train_test_split(X, y, test_size=0.3, random_state=0)
 
 
-# Márcio, agora vamos rodar as Redes Neurais:
+# agora vamos rodar as Redes Neurais:
 from sklearn.neural_network import MLPClassifier
 classificador = MLPClassifier(verbose = True, max_iter = 1000, tol = 0.00001)
 
@@ -73,4 +63,3 @@ matriz = confusion_matrix(y_teste, previsoes)
 taxa_erro = 1 - precisao
 
 # Após algumas passagens, consegui 74.7%
-# Abs.

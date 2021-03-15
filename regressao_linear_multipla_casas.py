@@ -7,7 +7,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error
 
-
+# Atriuindo o arquivo a variavel "base"
 base = pd.read_csv('https://raw.githubusercontent.com/wallacecarlis/arquivos/main/house_prices.csv')
 
 # Selecionando os atributos previsores "x"
@@ -27,8 +27,7 @@ regressor = LinearRegression()
 regressor.fit(x_treinamento, y_treinamento)
 
 # evidenciando o resultado de 0.70 (correlacao positiva forte)
-# com mais variáveis ja e possi­vel se aproximar do preco correto frete
-# a regressão linear simples
+# com mais variáveis ja e possivel se aproximar do preco correto frente a regressão linear simples
 score = regressor.score(x_treinamento, y_treinamento)
 
 # Criando as previsoes (testes)

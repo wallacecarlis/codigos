@@ -1,5 +1,6 @@
 # Regressão Linear Múltipla
-# Base de dados de preços das casas
+# Base de dados de preços das casas retiradas do Kaggle
+# "House Sales in King County, USA"
 
 # Importando as bibliotecas
 import pandas as pd

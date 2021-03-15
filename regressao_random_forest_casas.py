@@ -3,7 +3,7 @@
 
 import pandas as pd
 
-base = pd.read_csv('house_prices.csv')
+base = pd.read_csv('https://raw.githubusercontent.com/wallacecarlis/arquivos/main/house_prices.csv')
 
 x = base.iloc[:, 3:19].values
 y = base.iloc[:, 2].values

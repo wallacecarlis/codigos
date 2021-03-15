@@ -1,4 +1,5 @@
 #Regressao Linear Simples
+# Base de dados de preços das casas
 
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -6,6 +7,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error, mean_squared_error
 
+# Atriuindo o arquivo a variavel "base"
 base = pd.read_csv('https://raw.githubusercontent.com/wallacecarlis/arquivos/main/house_prices.csv')
 
 # Atributo previsor - metragem quadrada da casa

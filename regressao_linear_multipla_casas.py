@@ -8,7 +8,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error
 
 
-base = pd.read_csv('house_prices.csv')
+base = pd.read_csv('https://raw.githubusercontent.com/wallacecarlis/arquivos/main/house_prices.csv')
 
 # Selecionando os atributos previsores "x"
 x = base.iloc[:, 3:19].values

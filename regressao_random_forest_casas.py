@@ -21,7 +21,8 @@ x_treinamento, x_teste, y_treinamento, y_teste = train_test_split(x, y,
                                                                  random_state = 0)
 
 # Criando o objeto
-regressor = RandomForestRegressor(n_estimators = 10)
+# quantidade de arvores = 100
+regressor = RandomForestRegressor(n_estimators = 100)
 
 # Treinamento da base: atributos "previsores e respostas"
 regressor.fit(x_treinamento, y_treinamento)

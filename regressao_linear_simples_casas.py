@@ -6,7 +6,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error, mean_squared_error
 
-base = pd.read_csv('house_prices.csv')
+base = pd.read_csv('https://raw.githubusercontent.com/wallacecarlis/arquivos/main/house_prices.csv')
 
 # Atributo previsor - metragem quadrada da casa
 x = base.iloc[:, 5:6].values
@@ -15,7 +15,7 @@ y = base.iloc[:, 2].values
 
 
 # "x_treinamento" para os parametros "b0 e b1"
-# "x_teste" para avaliação do desempenho sobre a previsao
+# "x_teste" para avaliaÃ§Ã£o do desempenho sobre a previsao
 x_treinamento, x_teste, y_treinamento, y_teste = train_test_split(x, y,
                                                                   test_size = 0.3,
                                                                   random_state = 0)
@@ -26,7 +26,7 @@ regressor = LinearRegression()
 regressor.fit(x_treinamento, y_treinamento)
 
 # evidenciando o resultado de 0.49
-# somente pelo tamanho da casa nao e possi�vel achar o preco correto
+# somente pelo tamanho da casa nao e possi­vel achar o preco correto
 score = regressor.score(x_treinamento, y_treinamento)
 
 # plotando o resultado de 0.49
